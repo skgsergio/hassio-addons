@@ -1,3 +1,3 @@
 ---
 build_from:
-  amd64: tinybirdco/tinybird-local@sha256:c3d26c57557030cd6a21dcb3b03dcc9107b659180cc04ab08a7127f199278bbe
+  amd64: tinybirdco/tinybird-local:latest

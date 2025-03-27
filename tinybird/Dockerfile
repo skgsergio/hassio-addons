@@ -1,4 +1,4 @@
-ARG BUILD_FROM=tinybirdco/tinybird-local@sha256:c3d26c57557030cd6a21dcb3b03dcc9107b659180cc04ab08a7127f199278bbe
+ARG BUILD_FROM=tinybirdco/tinybird-local:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
