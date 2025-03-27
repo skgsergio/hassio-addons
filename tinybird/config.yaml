@@ -1,0 +1,20 @@
+---
+name: Tinybird Self-Managed
+version: "0.1.0"
+slug: tinybird
+description: Tinybird Self-Managed on Home Assistant
+url: https://github.com/skgsergio/hassio-addons
+init: false
+arch:
+  - amd64
+schema:
+  tb_infra_token: str
+  tb_infra_workspace: str
+  tb_infra_organization: str
+  tb_infra_user: str
+  cloudflared_token: str?
+ports:
+  7181/tcp: 7181
+ports_description:
+  7181/tcp: Tinybird API
+image: "ghcr.io/skgsergio/{arch}-addon-tinybird"

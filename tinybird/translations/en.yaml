@@ -1,0 +1,17 @@
+---
+configuration:
+  tb_infra_token:
+    name: Tinybird's Infrastructure token
+    description: Value of the TB_INFRA_TOKEN variable
+  tb_infra_workspace:
+    name: Tinybird's Workspace name
+    description: Value of the TB_INFRA_WORKSPACE variable
+  tb_infra_organization:
+    name: Tinybird's Organization name
+    description: Value of the TB_INFRA_ORGANIZATION variable
+  tb_infra_user:
+    name: Tinybird's user
+    description: Value of the TB_INFRA_USER variable
+  cloudflared_token:
+    name: Cloudflared token
+    description: Cloudflare Tunnel token, if empty cloudflared will be disabled

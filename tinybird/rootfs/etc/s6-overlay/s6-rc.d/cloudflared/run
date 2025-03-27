@@ -1,0 +1,14 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# Local Variables:
+# mode: shell-script
+# sh-shell: bash
+# End:
+
+if ! bashio::config.has_value 'cloudflared_token'; then
+    bashio::log.info "cloudflared not enabled (missing token)"
+    exec /usr/bin/sleep inf
+fi
+
+bashio::log.info "Starting cloudflated..."
+exec /usr/bin/cloudflared --no-autoupdate tunnel run --token="$(bashio::config 'cloudflared_token')"

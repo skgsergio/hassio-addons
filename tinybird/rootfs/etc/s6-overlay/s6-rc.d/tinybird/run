@@ -1,0 +1,17 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# Local Variables:
+# mode: shell-script
+# sh-shell: bash
+# End:
+
+bashio::log.info "Starting Tinybird Local..."
+
+TB_INFRA_TOKEN=$(bashio::config 'tb_infra_token')
+TB_INFRA_WORKSPACE=$(bashio::config 'tb_infra_workspace')
+TB_INFRA_ORGANIZATION=$(bashio::config 'tb_infra_organization')
+TB_INFRA_USER=$(bashio::config 'tb_infra_user')
+
+export TB_INFRA_TOKEN TB_INFRA_WORKSPACE TB_INFRA_ORGANIZATION TB_INFRA_USER
+
+exec /usr/bin/supervisord
