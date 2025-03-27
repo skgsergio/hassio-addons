@@ -1,4 +1,4 @@
-ARG BUILD_FROM=tinybirdco/tinybird-local:latest
+ARG BUILD_FROM=tinybirdco/tinybird-local@sha256:c3d26c57557030cd6a21dcb3b03dcc9107b659180cc04ab08a7127f199278bbe
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -75,7 +75,7 @@ RUN \
         /tmp/* \
         /var/cache/* \
         /var/lib/apt/lists/* \
-    && find /var/log/ -type f -delete
+    && find /var/log/ -type f -not -path '/var/log/nginx/*' -delete
 
 COPY rootfs /
 
