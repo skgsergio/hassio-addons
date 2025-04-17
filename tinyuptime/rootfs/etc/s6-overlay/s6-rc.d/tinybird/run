@@ -1,0 +1,29 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# Local Variables:
+# mode: shell-script
+# sh-shell: bash
+# End:
+
+bashio::log.info "Starting Tinyuptime..."
+
+export TINYUPTIME_TB_API_ENDPOINT=$(bashio::config 'tb_api_endpoint')
+export TINYUPTIME_TB_API_KEY=$(bashio::config 'tb_api_key')
+
+if bashio::config.has_value "check_max_concurrency"; then
+    export TINYUPTIME_CHECK_MAX_CONCURRENCY=$(bashio::config 'check_max_concurrency')
+fi
+
+if bashio::config.has_value "check_scheduler_interval"; then
+    export TINYUPTIME_CHECK_SCHEDULER_INTERVAL=$(bashio::config 'check_scheduler_interval')
+fi
+
+if bashio::config.has_value "batch_size"; then
+    export TINYUPTIME_BATCH_SIZE=$(bashio::config 'batch_size')
+fi
+
+if bashio::config.has_value "batch_flush_interval"; then
+    export TINYUPTIME_BATCH_FLUSH_INTERVAL=$(bashio::config 'batch_flush_interval')
+fi
+
+exec /opt/tinyuptime

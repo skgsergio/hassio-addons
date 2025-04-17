@@ -1,0 +1,17 @@
+---
+name: Tinyuptime
+version: "0.1.0"
+slug: tinyuptime
+description: URL uptime checker using Tinybird as analytics platform
+url: https://github.com/skgsergio/hassio-addons
+init: false
+arch:
+  - amd64
+schema:
+  tb_api_endpoint: str
+  tb_api_key: str
+  check_max_concurrency: int?
+  check_scheduler_interval: int?
+  batch_size: int?
+  batch_flush_interval: int?
+image: "ghcr.io/skgsergio/{arch}-addon-tinyuptime"

@@ -1,0 +1,20 @@
+---
+configuration:
+  tb_api_endpoint:
+    name: Tinybird API endpoint
+    description: Tinybird's API endpoint for your Tinyuptime workspace
+  tb_api_key:
+    name: Tinybird API key
+    description: Tinybird's admin API key for your Tinyuptime workspace
+  check_max_concurrency:
+    name: Max concurrency
+    description: Maximum checks at the same time (pool of checker gorutines)
+  check_scheduler_interval:
+    name: Check scheduler interval seconds
+    description: Interval for stale checks comprobation and check scheduling in seconds
+  batch_size:
+    name: Results batch size
+    description: How many resuts to batch before sending to Tinybird
+  batch_flush_interval:
+    name: Batch flush interval
+    description: How often the pending batches are flushed if they didn't reach the size
