@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Update tinyuptime
+
 ## 0.2.0
 
 - Use new API token instead of the admin one
