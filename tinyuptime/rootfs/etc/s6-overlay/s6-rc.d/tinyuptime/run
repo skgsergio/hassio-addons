@@ -8,7 +8,7 @@
 bashio::log.info "Starting Tinyuptime..."
 
 export TINYUPTIME_TB_API_ENDPOINT=$(bashio::config 'tb_api_endpoint')
-export TINYUPTIME_TB_API_KEY=$(bashio::config 'tb_api_key')
+export TINYUPTIME_TB_API_TOKEN=$(bashio::config 'tb_api_token')
 
 if bashio::config.has_value "check_max_concurrency"; then
     export TINYUPTIME_CHECK_MAX_CONCURRENCY=$(bashio::config 'check_max_concurrency')
@@ -26,4 +26,4 @@ if bashio::config.has_value "batch_flush_interval"; then
     export TINYUPTIME_BATCH_FLUSH_INTERVAL=$(bashio::config 'batch_flush_interval')
 fi
 
-exec /opt/tinyuptime
+exec /opt/tinyuptime -pretty

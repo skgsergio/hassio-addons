@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Use new API token instead of the admin one
+- Pretty logs
+
 ## 0.1.2
 
 - Update tinyuptime
