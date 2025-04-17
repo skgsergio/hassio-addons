@@ -17,4 +17,4 @@ configuration:
     description: How many resuts to batch before sending to Tinybird
   batch_flush_interval:
     name: Batch flush interval
-    description: How often the pending batches are flushed if they didn't reach the size
+    description: How often the pending batches are flushed if they didn't reach the batch size

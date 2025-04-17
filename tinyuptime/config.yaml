@@ -1,6 +1,6 @@
 ---
 name: Tinyuptime
-version: "0.1.0"
+version: "0.1.1"
 slug: tinyuptime
 description: URL uptime checker using Tinybird as analytics platform
 url: https://github.com/skgsergio/hassio-addons

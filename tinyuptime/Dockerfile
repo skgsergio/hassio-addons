@@ -5,7 +5,7 @@ FROM golang:1.24 AS build
 RUN \
     git clone https://github.com/skgsergio/tinyuptime.git /src \
     && cd /src/agent \
-    && go build -o /tinyuptime ./cmd/tinyuptime
+    && CGO_ENABLED=0 GOOS=linux go build -o /tinyuptime ./cmd/tinyuptime
 
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
