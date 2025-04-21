@@ -1,3 +1,7 @@
+## 0.2.3
+
+- Update tinyuptime
+
 ## 0.2.2
 
 - Update tinyuptime, now has failing checks retries
