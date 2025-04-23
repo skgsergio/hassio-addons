@@ -1,3 +1,7 @@
+## 0.2.0
+
+- Fix persistence
+
 ## 0.1.2
 
 - Revert upstream image pinning using image digests

@@ -1,0 +1,24 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# Local Variables:
+# mode: shell-script
+# sh-shell: bash
+# End:
+
+bashio::log.info "Fixing folders for data persistence..."
+
+if [ ! -d /data/redis ]; then
+    mkdir /data/redis
+fi
+if [ -d /redis-data ]; then
+    rm -rf /redis-data
+    ln -s /data/redis /redis-data
+fi
+
+if [ ! -d /data/clickhouse ]; then
+    mkdir /data/clickhouse
+fi
+if [ -d /var/lib/clickhouse ]; then
+    rm -rf /var/lib/clickhouse
+    ln -s /data/clickhouse /var/lib/clickhouse
+fi

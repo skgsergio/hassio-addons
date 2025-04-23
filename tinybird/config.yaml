@@ -1,6 +1,6 @@
 ---
 name: Tinybird Self-Managed
-version: "0.1.2"
+version: "0.2.0"
 slug: tinybird
 description: Tinybird Self-Managed on Home Assistant
 url: https://github.com/skgsergio/hassio-addons
