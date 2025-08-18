@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Update base image
+
 ## 0.2.0
 
 - Fix persistence
