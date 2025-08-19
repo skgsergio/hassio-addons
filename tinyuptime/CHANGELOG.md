@@ -1,3 +1,7 @@
+## 0.2.8
+
+- Update tinyuptime
+
 ## 0.2.7
 
 - Update tinyuptime
